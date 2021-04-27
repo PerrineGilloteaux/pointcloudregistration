@@ -7,9 +7,11 @@ project(${NAME})
 
 set(IPOPT_INCLUDE_DIR ~/ipopt/include/coin/)
 set(IPOPT_LIBRARY_DIR ~/ipopt/lib)
-
-find_package(PCL 1.8 REQUIRED)
-
+set(PCL_DIR C:/dev/vcpkg/packages/pcl_x86-windows/share/pcl)
+set(EIGEN_INCLUDE_DIR C:/dev/vcpkg/packages/eigen3_x86-windows/share/eigen3)
+set(Boost_INCLUDE_DIR C:/dev/vcpkg/packages/boost-algorithm_x86-windows/share/boost-algorithm)
+find_package(PCL 1.11 REQUIRED)
+find_package(eigen 3.3 REQUIRED)
 include_directories(SYSTEM ${PCL_INCLUDE_DIRS} ${IPOPT_INCLUDE_DIR})
 link_directories(${PCL_LIBRARY_DIRS} ${IPOPT_LIBRARY_DIR})
 add_definitions(${PCL_DEFINITIONS})
