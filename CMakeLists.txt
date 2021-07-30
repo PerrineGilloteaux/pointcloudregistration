@@ -7,14 +7,10 @@ project(${NAME})
 
 set(IPOPT_INCLUDE_DIR ~/ipopt/include/coin/)
 set(IPOPT_LIBRARY_DIR ~/ipopt/lib)
-set(PCL_DIR C:/dev/vcpkg/packages/pcl_x86-windows/share/pcl)
-set(EIGEN_INCLUDE_DIR C:/dev/vcpkg/packages/eigen3_x86-windows/share/eigen3)
-set(Boost_INCLUDE_DIR C:/dev/vcpkg/packages/boost-algorithm_x86-windows/share/boost-algorithm)
-find_package(PCL 1.11 REQUIRED)
-find_package(eigen 3.3 REQUIRED)
-include_directories(SYSTEM ${PCL_INCLUDE_DIRS} ${IPOPT_INCLUDE_DIR})
+set(PCL_LIBRARIES_DIRS C:/dev/vcpkg/packages/pcl_x86-windows/lib)
+
+
 link_directories(${PCL_LIBRARY_DIRS} ${IPOPT_LIBRARY_DIR})
-add_definitions(${PCL_DEFINITIONS})
 
 set(SRC src/cpr_main.cpp src/cpr_debugprint.cpp src/cpr_processedpointcloud.cpp src/cpr_clustering.cpp src/cpr_connectedcomponents.cpp src/cpr_features.cpp src/cpr_matrices.cpp src/cpr_graphmatching.cpp src/cpr_graphmatching_frankwolfe.cpp src/cpr_graphmatching_nonlin.cpp src/cpr_ransac.cpp src/cpr_visualisation.cpp src/cpr_params.cpp src/cpr_loadfiles.cpp)
 

@@ -71,7 +71,7 @@ $(RUNTESTS):
 $(RANSAC):
 	make -C ../ransac
 
-<<<<<<< HEAD
+
 ec-clem:
 	git clone https://github.com/anrcrocoval/ec-clem.git
 

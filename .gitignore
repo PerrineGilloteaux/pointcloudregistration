@@ -24,7 +24,8 @@ pointclouds/dragon_vrip_res2.ply
 pointclouds/untracked/
 
 # ignore all output files: matrices, ESF descriptors, etc
-
+*.log
+*.tlog
 output/
 #tests/maketests/matched_pointclouds/*.csv
 tests/maketests/average_distances.txt
